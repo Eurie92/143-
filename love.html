@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: arial;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        button {
+            width: 110px;
+            height: 40px;
+            border-radius: 10px;
+            background: none;
+            border: 3px solid rgb(1, 185, 231);
+            transition: width 0.5s, height 0.5s, font-size 0.5s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            font-size: larger;
+            width: 150px;
+            height: 80px;
+            backdrop-filter: blur(50px);
+            background-color: lightblue;
+            color: white;
+        }
+
+        .container {
+            position: relative;
+            width: 1000px; 
+            height: 600px; 
+            padding: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+            box-shadow: 10px 10px 20px;
+            border: 5px solid transparent;
+            border-radius: 5px;
+            animation: borderMove 12s linear infinite;
+        }
+        
+        .container::after {
+            filter: blur(100%);
+        }
+
+        @keyframes borderMove {
+            0% {
+                border-color: red;
+              }
+              
+              50% {
+                border-color: white;
+              }
+              
+              100% {
+                border-color: violet;
+              }
+            }
+
+            .pic {
+                display: none;
+                position: absolute;
+                top: 125px;
+                left: 225px;
+
+                width: 600px;
+                height: 500px;
+                transition: 0.5s ease;
+                overflow: auto;
+                white-space: nowrap;
+                padding: 10px;
+             
+              
+            }
+
+            .pic img {
+
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            }
+            header {
+                background-color: rgb(250, 94, 94);
+                padding: 2px;
+                border-radius: 8px;
+            }
+
+            .writer {
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              border-right: solid 2px;
+              animation: typing 2s steps(30), cursor 1.2s step-end forwards;
+              display: none;
+          }
+          
+          @keyframes cursor {
+              from, to { border-color: transparent; }
+          }
+          
+          @keyframes typing {
+              from { width: 0; }
+              to { width: 100%; }
+          }
+          
+          img {
+            width: 50%;
+            height: 50%;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+          }
+
+          .last {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: solid 2px;
+            animation: typings 2s steps(30), cursors 1.2s step-end forwards;
+            display: none;
+            position: absolute;
+            top: 400px;
+          }
+          @keyframes cursors {
+            from, to { border-color: transparent; }
+        }
+        
+        @keyframes typings {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+  <audio id="clickSound" src="button-click-sound.mp3"></audio>
+    <button id="btns" class="BTN" onclick="myFunction()">BONUS</button>
+
+    <div id="show" class="container">
+
+    <header><h1 class="image">Happy New Year</h1></header>
+      <h1 id="wrt" class="writer">HI MY LOVE I MISS YOU SO MUCH <br>
+        I made this for you, my love, because I am thankful <br> that you are there for me always <br> even in the bad times. <br>
+</h1>
+    <div id="picture" class="pic"> 
+
+      <img src="first.jpg" alt="Cinque Terre" width="600" height="400">
+  <img src="412640067_873320514466151_6267100138852543184_n.jpg" alt="" width="600" height="400">
+  
+
+    </div>
+    
+    <h1 class="last" id="last1"> Happy New Year! <br> It's another year that you have been with me <br> I'm glad that I have you.  <br>
+    I LOVE YOU SO MUCH <br> 1/1/2024</h1>
+
+
+
+
+
+  </div> 
+  
+  <script>
+    function myFunction() {
+      var div = document.getElementById('show');
+      var imgs = document.getElementById('picture');
+      var button = document.getElementById('btns');
+      var type = document.getElementById('wrt')
+      var last = document.getElementById('last1')
+
+      div.style.display = 'block';
+      button.style.display = 'none';
+      
+    
+      setTimeout(function() {
+        imgs.style.display = 'block';
+      }, 10000);
+
+      setTimeout(function() {
+        type.style.display = 'block';
+      }, 100);
+
+      setTimeout(function() {
+        type.style.display = 'none';
+      }, 10000);
+
+      setTimeout(function() {
+        last.style.display = 'block';
+      }, 11000);
+    }
+
+
+  </script>
+</body>
+</html>

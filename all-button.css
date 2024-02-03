@@ -1,0 +1,47 @@
+.click {
+    width: 80px;
+    height: 40px;
+    border: 2px solid rgb(181, 26, 58);
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    transition: width 0.5s, height 0.5s, font-size 0.5s;
+ 
+}
+
+.click:hover {
+    width: 120px;
+    height: 80px;
+    font-size: larger;
+    background-color: rgb(181, 26, 58);
+    color: white;
+    transform: rotate(180DEG);
+}
+
+.touch {
+    z-index: 1;
+    position: absolute;
+    top: 250px;
+    right: 570px;
+    background-color: red;
+    color: white;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 440px) {
+   
+.touch {
+    z-index: 1;
+    position: absolute;
+    top: 390px;
+    right: -50px;
+    background-color: red;
+    color: white;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 18th monthsary</title>
+
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: visible;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 1000px; 
+            height: 600px; 
+            padding: 20px;
+
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            display: none;
+            font-size: 100px;
+        }
+
+        .gone {
+            position: absolute;
+            top: -1000px;
+        }
+
+        .a {
+            width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: solid 2px;
+      animation: typing 2s steps(30), cursor 1.2s step-end forwards;
+      display: none;
+      position: absolute;
+      left: 80px;
+      font-size: 15px;
+    }
+    
+    @keyframes cursor {
+        from, to { border-color: transparent; }
+    }
+    
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+        }
+
+        .circle {
+            background-color: #FFF7D4;
+            width: 150px;
+            height: 100px;
+            border-radius: 40px;
+            animation: teytey 1s ease-in-out forwards;
+            animation-name: teytey;
+            animation-duration: 0.8s;
+            animation-timing-function: 1;
+            animation-fill-mode: forwards;
+            display: none;
+            z-index: -1;
+        }
+        
+        @keyframes teytey {
+            from {
+                transform: scale(0);        
+            }
+        
+            to {
+                transform: scale(40);
+            }
+        }
+        
+        .p {
+            display: none;
+         justify-content: center;
+         align-items: center;
+         width: 500px;
+        }
+
+        img {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <button id="gone" class="gone
+    " onclick="playBackgroundSound()">Play Sound</button>
+    <audio id="backgroundSound" autoplay>
+    <source src="Conan Gray - Heather (Lyric Video).mp3" type="audio/mp3">
+    
+</audio>
+<div id="show" class="circle"></div>
+    <div class="container">
+        <h1 id="h" class="h">H</h1>
+        <h1 id="i" class="i">I</h1>
+        <h1 id="l" class="l">LOVE</h1>
+
+        <h1 id="a" class="a"> AKALAIN MO ANG TAGAL NA PALA NATIN NUNG <br> 
+            KELAN LANG NILILIGAWAN <br> PALANG KITA PERO NGAYON PANG 18TH <br> MONTHSARY NANATIN 
+            THANK YOU SA LAHAT <br>BABY SA PAG STAY SA PAG <br> INTINDI SAKIN ARAW ARAW <br>MAHAL NA MAHAL KITA SOBRA 
+            </h1>
+            <div id="p" class="p w3-section">
+                <img class="mySlides" src="412640067_873320514466151_6267100138852543184_n.jpg" >
+                <img class="mySlides" src="first.jpg" >
+                <img class="mySlides" src="412654660_335732812593667_3242449118682395324_n.jpg" >
+                <img class="mySlides" src="412840262_1121743402539354_5713997056662552044_n.jpg" >
+                <img class="mySlides" src="413363077_352399514166100_7147396921355944590_n.jpg" >
+                <img class="mySlides" src="420349596_3045069245625535_5749342842057430965_n.jpg" >
+                <img class="mySlides" src="421598178_1133366920887514_7761942986017986480_n.jpg" >
+                <img class="mySlides" src="422008863_915770029827137_4916542530302520587_n.jpg" >
+                <img class="mySlides" src="422246303_7027107460671306_6237296261029859592_n.jpg" >
+                <footer>I LOVE YOU SO MUCH <br>HAPPY 18TH MONTHSARY</footer>
+              </div>
+              
+    </div>
+
+   
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            myFunction();
+        });
+        
+        function myFunction() {
+            const h = document.getElementById('h');
+            const i = document.getElementById('i');
+            const l = document.getElementById('l');
+            const a = document.getElementById('a');
+            const shows = document.getElementById('show');
+            const change =  document.body;
+            const p = document.getElementById('p');
+
+
+            setTimeout(function() {
+                h.style.display = 'block';
+              }, 1800);
+
+
+
+              setTimeout(function() {
+                  i.style.display = 'block';
+                }, 2000);
+
+                
+            setTimeout(function() {
+                h.style.display = 'none';
+              }, 3000);
+
+
+              setTimeout(function() {
+                  i.style.display = 'none';
+                }, 3000);
+    
+
+                setTimeout(function() {
+                    l.style.display = 'block';
+                  }, 3000);
+    
+                  setTimeout(function() {
+                    l.style.display = 'none';
+                  }, 5000);
+
+                  
+
+                setTimeout(function() {
+                    a.style.display = 'block';
+                  }, 5000);
+    
+                  setTimeout(function() {
+                    a.style.display = 'none';
+                  }, 25000);
+
+                  setTimeout(function() {
+                    shows.style.display = 'block';
+                  }, 25000);
+
+                  setTimeout(function() {
+                    shows.style.display = 'none';
+                  }, 26000);
+
+                  setTimeout(function(){
+                    change.style.backgroundColor = "#FFF7D4";
+                    }, 26000);
+
+                    setTimeout(function() {
+                        p.style.display = 'flex';
+                      }, 26000);
+
+                      setTimeout(function() {
+                        window.location.href = "love.html";
+                    }, 195600); 
+            
+
+        }
+
+        function playBackgroundSound() {
+            const backgroundSound = document.getElementById('backgroundSound');
+            backgroundSound.play();
+
+        }
+
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+
+    </script>
+</body>
+</html>

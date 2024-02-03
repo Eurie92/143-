@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy monthsary</title>
+  <link rel="stylesheet" href="prac.css">
+  <link rel="stylesheet" href="message.css">
+  <link rel="stylesheet" href="all-button.css">
+    <link rel="stylesheet" href="circle.css">
+</head>
+<body>
+<div>
+  <button class="click" onclick="myFunction()" id="gone">Click Me</button>
+
+    <button id="see" class="touch" onclick="reMove()">Touch Me</button>
+</div>
+
+  <div id="msg" class="msg">
+    <h1>HI MY LOVE ANONG <br>SABI  MONG  <br>NAKALIMUTAN <br> KOTONG ARAW NATO</h1>
+  </div>
+
+
+  <div id="show" class="circle"></div>
+
+  <div id="shows1" class="circle1"></div>
+
+  <div id="shows2" class="circle2"></div>
+
+  <div id="shows3" class="circle3"> </div>
+
+  <div id="shows4" class="circle4"></div>
+
+  <div id="shows5" class="circle5"></div>
+
+  <div id="shows6" class="circle6"></div>
+
+
+  <div id="heart" class="heart"></div>
+
+
+
+<h1 id="wrt" class="love-letter">HAPPY 18TH MONTHSARY <br>MY LOVE</h1>
+<h1 id="wrt2" class="love-letter"> AND ADVANCED <br> HAPPY VALENTINES</h1>
+<h1 id="wrt3" class="love-letter">Sa valentines ko pa dapat <br> to balak isend sayo kaso <br> and tampuhin nya guys <br> kala niya kinakalimutan
+  </h1>
+<h1 class="love-letter">anyways</h1>
+
+  <script>
+    function myFunction() {
+      const shows = document.getElementById('show');
+      const gones = document.getElementById('gone');
+      const hearts = document.getElementById('heart');
+      const change =  document.body;
+      const appear = document.getElementById('see');
+      const msgs = document.getElementById('msg');
+    
+
+
+      hearts.style.display = 'block';
+      gones.style.display = 'none';
+      shows.style.display = 'block';
+  
+
+
+
+      setTimeout(function(){
+        change.style.backgroundColor = "rgb(228, 131, 151)";
+        }, 2000);
+
+      setTimeout(function(){
+        appear.style.display = 'block';
+        }, 1900);
+
+        setTimeout(function() {
+          msgs.style.display = 'block';
+        }, 1800);
+
+
+    }
+
+    
+  </script>
+  <script src="remove.js"></script>
+  <script src="circle-remove.js"></script>
+</body>
+</html>
