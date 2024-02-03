@@ -6,7 +6,10 @@ function reMove() {
     const shows5 = document.getElementById('shows5');
     const shows6 = document.getElementById('shows6');
     const change =  document.body;
-
+    const changes =  document.body;
+    
+ changes.style.backgroundColor = "rgb(228, 131, 151)";
+    
     setTimeout(function() {
         shows1.style.display = 'block';
       }, 15000);
